@@ -9,8 +9,9 @@ export class Main extends React.Component{
         playerInfo:{}
     }
     componentDidMount() {
-        nba.stats.playerInfo({PlayerId:this.state.playerId}).then((info) => {
+        nba.stats.playerInfo({PlayerID:this.state.playerId}).then((info) => {
            const playerInfo = Object.assign(info.commonPlayerInfo[0], info.playerHeadlineStats[0]);
+           console.log(playerInfo);
            this.setState({playerInfo});
         });
     }
