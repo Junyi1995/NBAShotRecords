@@ -4,6 +4,7 @@
 @import 'styles/Main.css';
 @import 'styles/DataViewContainer.css';
 @import '~antd/dist/antd.css';
+@import 'styles/SearchBar.css';
 body {
   margin: 0;
   padding: 0;
