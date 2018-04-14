@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/images/nba-logoman.svg';
+import nba from '../assets/images/nba-logoman.svg';
 
 
 export class TopNavBar extends React.Component{

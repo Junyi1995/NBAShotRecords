@@ -14,7 +14,7 @@ export class SearchBar extends React.Component {
         this.setState({
             dataSource: !value ? [] : nba.searchPlayers(value).map(({fullName, playerId}) => {
                 return (
-                <Option key = {playerId}>
+                <Option key = {playerId} value = {fullName}>
                     <img className='player-option-image' src = {`${PROFILE_PIC_URL_PREFIX}/${playerId}.png`}/>
                     <span className='player-option-label'>{fullName}</span>
                 </Option>
@@ -35,6 +35,7 @@ export class SearchBar extends React.Component {
                 onSelect={this.onSelect}
                 onSearch={this.handleSearch}
                 placeholder="search NBA Player"
+                optionLabelProp='value'
             >
             <Input suffix={<Icon type="search" className="certain-category-icon" />} />
             </AutoComplete>
